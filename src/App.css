@@ -17,7 +17,7 @@
     --Very_Dark_Blue: hsl(207, 26%, 17%);
 
     /* (Light Mode Text)*/
-    --Very_Dark_Blue: hsl(200, 15%, 8%);
+    --Very_Dark_Blue_2: hsl(200, 15%, 8%);
 
     /* (Light Mode Input)*/
     --Dark_Gray: hsl(0, 0%, 52%);
@@ -27,4 +27,14 @@
 
     /*(Dark Mode Text & Light Mode Elements)*/
     --White: hsl(0, 0%, 100%);
+
+    --home-fs: 0.875rem;
+    --delta: 0.5s;
+}
+
+.container {
+    max-width: 1300px;
+
+    margin-inline: auto;
+    padding-inline: 2em;
 }
