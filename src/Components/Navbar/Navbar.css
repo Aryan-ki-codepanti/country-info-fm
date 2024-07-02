@@ -36,9 +36,6 @@
 /* light designs */
 .App.light .nav-contain {
     background: white;
-}
-
-.App.light .nav-contain {
     box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
 }
 
@@ -54,4 +51,5 @@
 .App.dark .nav-contain {
     background: var(--Dark_Blue);
     color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
