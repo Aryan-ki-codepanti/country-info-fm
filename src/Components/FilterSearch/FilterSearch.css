@@ -1,0 +1,71 @@
+.FilterSearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 4em;
+}
+
+.filter {
+    position: relative;
+}
+
+.filters {
+    position: absolute;
+    /* display: none; */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    border-radius: 6px;
+    transition: all var(--delta) ease-in-out;
+}
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--home-fs);
+    min-width: 260px;
+    padding-inline: 2em;
+    font-weight: 300;
+
+    transition: all var(--delta) ease-in-out;
+}
+.search-bar .glass-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    aspect-ratio: 1;
+    background-size: 25px 25px;
+
+    transition: all var(--delta) ease-in-out;
+}
+
+.App.light .search-bar {
+    background: white;
+}
+.App.light .search-bar input {
+    color: var(--Dark_Gray);
+}
+
+.App.light .search-bar .glass-icon {
+    background: url("/images/search.svg");
+}
+.App.dark .search-bar .glass-icon {
+    background: url("/images/search-dark.svg");
+}
+.App.dark .search-bar {
+    background: var(--Dark_Blue);
+}
+.App.dark .search-bar input,
+.App.dark .search-bar input::placeholder {
+    color: white;
+
+    transition: all var(--delta) ease-in-out;
+}
+
+/* Filter portion */
