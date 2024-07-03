@@ -80,21 +80,25 @@
     font-weight: 600;
     border-radius: 6px;
 }
+
+.filter span {
+    min-width: 100.4px;
+}
 .filter > div {
     align-items: center;
     gap: 2em;
     padding-inline-end: 1em;
     padding-block: 1.6em;
-    cursor: pointer;
     transition: all var(--delta) ease-in-out;
 }
-.filter .arrow-icon {
+.filter .arrow-icon,
+.filter .cross-icon {
     background-repeat: no-repeat;
     background-position: center;
     width: 15px;
     aspect-ratio: 1;
     background-size: 10px 10px;
-
+    cursor: pointer;
     transition: all var(--delta) ease-in-out;
 }
 
@@ -104,6 +108,14 @@
 .App.dark .filter .arrow-icon {
     background-image: url("/images/arrow-down-dark.svg");
 }
+
+.App.light .filter .cross-icon {
+    background-image: url("/images/cross.svg");
+}
+.App.dark .filter .cross-icon {
+    background-image: url("/images/cross-dark.svg");
+}
+
 .App.light .filter {
     color: var(--Very_Dark_Blue_2);
 }
@@ -121,6 +133,7 @@
 .filters li {
     list-style: none;
     padding: 0.5em 2em;
+    cursor: pointer;
 }
 .filters li:first-child {
     padding-top: 1em;

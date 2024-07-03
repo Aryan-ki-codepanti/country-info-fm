@@ -200,7 +200,6 @@ import "./CountryCard.css";
 
 */
 const CountryCard = ({ country }) => {
-    console.log(country);
     return (
         <div className="CountryCard">
             <div className="flag">
@@ -209,13 +208,15 @@ const CountryCard = ({ country }) => {
             <div className="lower">
                 <h3>{country?.name?.common}</h3>
                 <span>
-                    <b>Population</b> {country?.population}
+                    <b>Population</b> :{" "}
+                    {country?.population?.toLocaleString("en-US")}
                 </span>
                 <span>
-                    <b>Region</b> {country?.region}
+                    <b>Region</b> : {country?.region}
                 </span>
                 <span>
-                    <b>Capital</b> {country?.capital[0]}
+                    <b>Capital</b> :
+                    {country?.capital?.length > 0 ? country?.capital[0] : "NA"}
                 </span>
             </div>
         </div>
