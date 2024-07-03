@@ -1,5 +1,6 @@
 import React from "react";
 import "./CountryCard.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 /*
 
@@ -200,8 +201,16 @@ import "./CountryCard.css";
 
 */
 const CountryCard = ({ country }) => {
+    const navigate = useNavigate();
     return (
-        <div className="CountryCard">
+        <div
+            className="CountryCard"
+            onClick={e => {
+                navigate(`/country/${country?.name?.common}`, {
+                    state: { country }
+                });
+            }}
+        >
             <div className="flag">
                 <img src={country?.flags?.svg} alt="country-flag" />
             </div>

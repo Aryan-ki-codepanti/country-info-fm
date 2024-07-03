@@ -1,5 +1,12 @@
 .CountryCard {
     border-radius: 6px;
+    cursor: pointer;
+
+    transition: all 0.1s ease-out;
+}
+
+.CountryCard:hover {
+    transform: scale(1.1);
 }
 
 .CountryCard .flag img {
