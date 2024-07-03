@@ -1,0 +1,135 @@
+.back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    width: 130px;
+    margin-top: 4em;
+    font-size: 1rem;
+    padding: 0.6em;
+    font-weight: 300;
+    cursor: pointer;
+
+    transition: all var(--delta) ease-in-out;
+    border-radius: 6px;
+}
+
+.back-btn .back-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    aspect-ratio: 1;
+    background-size: 25px 25px;
+
+    transition: all var(--delta) ease-in-out;
+}
+
+.App.light .back-btn {
+    color: var(--Very_Dark_Blue_2);
+}
+.App.dark .back-btn {
+    color: white;
+}
+
+.App.light .back-btn .back-icon {
+    background-image: url("/images/arrow-left.svg");
+}
+.App.dark .back-btn .back-icon {
+    background-image: url("/images/arrow-left-dark.svg");
+}
+
+/* info part */
+.country-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    margin-top: 4em;
+    place-items: center;
+}
+
+.flag > img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 3/2;
+}
+
+.info {
+    display: grid;
+    gap: 2em;
+    padding-left: 4em;
+    grid-template-areas:
+        "head head"
+        "items-l items-r"
+        "border border";
+
+    transition: all var(--delta) ease-in-out;
+}
+
+.info h1 {
+    grid-area: head;
+    font-weight: 800;
+}
+
+.info {
+    font-weight: 300;
+}
+.info b {
+    font-weight: 600;
+}
+
+.items-l {
+    grid-area: items-l;
+}
+.items-r {
+    grid-area: items-r;
+}
+
+.border {
+    grid-area: border;
+    margin-top: 2em;
+}
+
+.items-l,
+.items-r {
+    display: flex;
+    gap: 0.5em;
+    flex-direction: column;
+    font-size: 1rem;
+}
+
+.border ul,
+.border {
+    display: flex;
+    gap: 1em;
+}
+.border ul {
+    flex-wrap: wrap;
+}
+
+.border ul li {
+    font-size: 1rem;
+    list-style: none;
+    border-radius: 6px;
+    padding-block: 0.3em;
+    min-width: 100px;
+
+    display: flex;
+    justify-content: center;
+
+    transition: all var(--delta) ease-in-out;
+}
+
+.App.light .info {
+    color: var(--Very_Dark_Blue_2);
+}
+.App.dark .info {
+    color: white;
+}
+.App.light .border ul li {
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.App.dark .border ul li {
+    background: var(--Dark_Blue);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+}
