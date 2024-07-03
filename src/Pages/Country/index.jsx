@@ -116,7 +116,18 @@ const Country = () => {
                         <ul>
                             {countryInfo?.borders
                                 ? countryInfo.borders.map((b, i) => (
-                                      <li key={i}>{getCountryName(b)}</li>
+                                      <li
+                                          key={i}
+                                          onClick={e =>
+                                              navigate(
+                                                  `/country/${getCountryName(
+                                                      b
+                                                  )}`
+                                              )
+                                          }
+                                      >
+                                          {getCountryName(b)}
+                                      </li>
                                   ))
                                 : "No Borders"}
                         </ul>

@@ -49,7 +49,7 @@
 
 .flag > img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     aspect-ratio: 3/2;
 }
 
@@ -115,8 +115,13 @@
 
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     transition: all var(--delta) ease-in-out;
+    /* transition: transform 0.1s ease-in-out; */
+}
+.border ul li:hover {
+    transform: scale(1.06);
 }
 
 .App.light .info {
