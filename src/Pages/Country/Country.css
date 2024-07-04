@@ -138,3 +138,25 @@
     background: var(--Dark_Blue);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
 }
+
+@media screen and (max-width: 700px) {
+    .country-info {
+        grid-template-columns: 1fr;
+        place-items: initial;
+    }
+
+    .country-info .info {
+        align-self: self-start;
+        padding-inline: 1em;
+        grid-template-areas:
+            "head"
+            "items-l"
+            "items-r"
+            "border";
+    }
+
+    .border {
+        flex-direction: column;
+        padding-bottom: 2em;
+    }
+}
