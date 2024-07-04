@@ -2,7 +2,7 @@
     border-radius: 6px;
     cursor: pointer;
 
-    transition: all 0.1s ease-out;
+    transition: all var(--delta) ease-in-out, transform 0.1s ease-out;
 }
 
 .CountryCard:hover {
@@ -36,10 +36,11 @@
     font-weight: 300;
 }
 
-.App.light .CountryCard {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.App.light .CountryCard,
+.App.light .CountryCard .flag img {
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
 }
-.App.light .CountryCard .lower {
+.App.light .CountryCard {
     background: white;
     color: var(--Very_Dark_Blue_2);
 }
@@ -47,7 +48,7 @@
 .App.dark .CountryCard {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
 }
-.App.dark .CountryCard .lower {
+.App.dark .CountryCard {
     color: white;
     background: var(--Dark_Blue);
 }

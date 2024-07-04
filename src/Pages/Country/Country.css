@@ -130,6 +130,10 @@
 .App.dark .info {
     color: white;
 }
+
+.App.light .country-info .flag > img {
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
 .App.light .border ul li {
     background: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
