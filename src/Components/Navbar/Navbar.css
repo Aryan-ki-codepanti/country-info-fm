@@ -1,0 +1,62 @@
+.nav-contain {
+    transition: all var(--delta) ease-in-out;
+}
+
+.navbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1.3em;
+}
+
+.navbox h1 {
+    font-weight: 800;
+}
+
+.theme-switch span {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.theme-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.theme-switch .icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 45px 45px;
+    width: 45px;
+    aspect-ratio: 1;
+
+    transition: all var(--delta) ease-in-out;
+}
+
+/* light designs */
+.App.light .nav-contain {
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px;
+}
+
+.App.light .theme-switch .icon {
+    background-image: url("/images/moon.svg");
+}
+
+/* dark designs */
+.App.dark .theme-switch .icon {
+    background-image: url("/images/moon_filled.svg");
+}
+
+.App.dark .nav-contain {
+    background: var(--Dark_Blue);
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+
+@media screen and (max-width: 700px) {
+    .theme-switch,
+    .navbox h1 {
+        font-size: 1.2rem;
+    }
+}

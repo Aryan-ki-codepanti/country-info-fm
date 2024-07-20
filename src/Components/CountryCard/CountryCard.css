@@ -1,0 +1,62 @@
+.CountryCard {
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: all var(--delta) ease-in-out, transform 0.1s ease-out;
+}
+
+.CountryCard:hover {
+    transform: scale(1.1);
+}
+
+.CountryCard .flag img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 6px 6px 0 0;
+}
+.CountryCard .lower {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
+    padding: 1.8em 1.6em 3em;
+
+    transition: all var(--delta) ease-in-out;
+}
+.CountryCard .lower h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 0.8em;
+}
+.CountryCard .lower span b {
+    font-weight: 600;
+}
+.CountryCard .lower span {
+    font-size: var(--home-fs);
+    font-weight: 300;
+}
+
+.App.light .CountryCard,
+.App.light .CountryCard .flag img {
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+.App.light .CountryCard {
+    background: white;
+    color: var(--Very_Dark_Blue_2);
+}
+
+.App.dark .CountryCard {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+}
+.App.dark .CountryCard {
+    color: white;
+    background: var(--Dark_Blue);
+}
+
+@media screen and (max-width: 700px) {
+    .CountryCard .flag img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}

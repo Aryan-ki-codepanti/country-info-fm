@@ -1,0 +1,163 @@
+.FilterSearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 4em;
+}
+
+.filter {
+    position: relative;
+}
+
+.filters {
+    position: absolute;
+    /* display: none; */
+}
+
+.search-bar,
+.filter > div {
+    display: flex;
+    align-items: center;
+    padding: 1.3em 2em;
+
+    border-radius: 6px;
+    transition: all var(--delta) ease-in-out;
+}
+.search-bar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--home-fs);
+    min-width: 360px;
+    padding-inline: 2em;
+    font-weight: 300;
+
+    transition: all var(--delta) ease-in-out;
+}
+.search-bar .glass-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 25px;
+    aspect-ratio: 1;
+    background-size: 25px 25px;
+
+    transition: all var(--delta) ease-in-out;
+}
+
+.App.light .search-bar,
+.App.light .filter > div,
+.App.light .filters,
+.App.light .back-btn {
+    background: white;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.App.light .search-bar input {
+    color: var(--Dark_Gray);
+}
+
+.App.light .search-bar .glass-icon {
+    background: url("/images/search.svg");
+}
+.App.dark .search-bar .glass-icon {
+    background: url("/images/search-dark.svg");
+}
+.App.dark .search-bar,
+.App.dark .filter > div,
+.App.dark .filters,
+.App.dark .back-btn {
+    background: var(--Dark_Blue);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+}
+.App.dark .search-bar input,
+.App.dark .search-bar input::placeholder {
+    color: white;
+    transition: all var(--delta) ease-in-out;
+}
+
+/* Filter portion */
+
+.filter {
+    font-size: var(--home-fs);
+    font-weight: 600;
+    border-radius: 6px;
+}
+
+.filter span {
+    min-width: 100.4px;
+}
+.filter > div {
+    align-items: center;
+    gap: 2em;
+    padding-inline-end: 1em;
+    padding-block: 1.6em;
+    transition: all var(--delta) ease-in-out;
+}
+.filter .arrow-icon,
+.filter .cross-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 15px;
+    aspect-ratio: 1;
+    background-size: 10px 10px;
+    cursor: pointer;
+    transition: all var(--delta) ease-in-out;
+}
+
+.App.light .filter .arrow-icon {
+    background-image: url("/images/arrow-down.svg");
+}
+.App.dark .filter .arrow-icon {
+    background-image: url("/images/arrow-down-dark.svg");
+}
+
+.App.light .filter .cross-icon {
+    background-image: url("/images/cross.svg");
+}
+.App.dark .filter .cross-icon {
+    background-image: url("/images/cross-dark.svg");
+}
+
+.App.light .filter {
+    color: var(--Very_Dark_Blue_2);
+}
+.App.dark .filter {
+    color: white;
+}
+
+/* drop down styling */
+.filters {
+    width: 100%;
+    margin-top: 0.3em;
+    border-radius: 10px;
+    transition: all var(--delta) ease-in-out;
+}
+.filters li {
+    list-style: none;
+    padding: 0.5em 2em;
+    cursor: pointer;
+}
+.filters li:first-child {
+    padding-top: 1em;
+}
+.filters li:last-child {
+    padding-bottom: 1em;
+}
+
+@media screen and (max-width: 700px) {
+    .FilterSearch {
+        flex-direction: column;
+        align-items: start;
+        gap: 3em;
+        padding-top: 2em;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar input {
+        min-width: auto;
+        width: 100%;
+    }
+}

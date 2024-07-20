@@ -1,0 +1,27 @@
+.CountryNotFound {
+    margin-top: 4em;
+    text-align: center;
+
+    transition: all var(--delta) ease-in-out;
+}
+
+.CountryNotFound h1 {
+    font-size: 7rem;
+}
+.CountryNotFound p {
+    font-size: 2rem;
+}
+
+.CountryNotFound img {
+    margin-top: 1em;
+    width: 300px;
+    object-fit: cover;
+}
+
+.App.light .CountryNotFound {
+    color: var(--Very_Dark_Blue_2);
+}
+
+.App.dark .CountryNotFound {
+    color: white;
+}
