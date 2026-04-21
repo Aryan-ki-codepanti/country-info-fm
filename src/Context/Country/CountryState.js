@@ -9,7 +9,9 @@ const CountryState = ({ children }) => {
 
     useEffect(() => {
         const fetchCountries = async () => {
-            const resp = await fetch(`https://restcountries.com/v3.1/all`);
+            const resp = await fetch(
+                `https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital`
+            );
             const res = await resp.json();
 
             console.log(res);
